@@ -253,6 +253,9 @@ tbody tr:hover{background:var(--surface-softer)}
 .callout .tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.12em;
   text-transform:uppercase;color:var(--primary);border:1px solid var(--outline-primary);
   border-radius:6px;padding:3px 9px;margin-bottom:11px}
+.callout__head{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  flex-wrap:wrap;margin-bottom:11px}
+.callout__head .tag{margin-bottom:0}
 .callout p{margin:0 0 8px;font-size:14.5px;color:var(--on-surface-70)}
 .callout p:last-child{margin:0}
 .callout--warn{background:linear-gradient(90deg,rgba(253,50,123,.07),rgba(253,50,123,.02))}
@@ -275,13 +278,27 @@ tbody tr:hover{background:var(--surface-softer)}
 .tl-node.n-may{border-color:var(--highlight)}
 .tl-node.n-jun i{width:11px;height:11px;background:var(--accent)}
 .tl-node.n-jun{border-color:var(--accent);box-shadow:0 0 0 4px rgba(253,50,123,.14)}
-.tl-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:2px}
-.tl-month{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.06em;
-  text-transform:uppercase;color:var(--primary)}
-.tl-title{font-family:'Outfit';font-size:21px;font-weight:800;color:var(--on-surface);letter-spacing:-.01em;margin:0}
-.adset{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--on-surface-50);
-  background:var(--surface-softer);border:1px solid var(--outline);border-radius:8px;
-  padding:7px 12px;display:inline-block;margin:4px 0 14px}
+.tl-head{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:6px}
+.tl-month{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--primary);background:var(--surface-soft);
+  border-radius:var(--r-full);padding:6px 14px;line-height:1}
+.tl-title{font-family:'Outfit';font-size:23px;font-weight:800;color:var(--on-surface);
+  letter-spacing:-.015em;margin:0;line-height:1.15;text-wrap:balance}
+/* timeline bullets: spacing over hairlines for a cleaner read */
+.timeline ul.clean{margin-bottom:4px}
+.timeline ul.clean>li{border-bottom:none;padding:7px 0 7px 28px}
+.timeline ul.clean>li::before{top:15px}
+.adset{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:6px 0 18px}
+.adset__id{display:inline-flex;align-items:stretch;border:1px solid var(--outline);
+  border-radius:10px;overflow:hidden;background:var(--surface);box-shadow:var(--sh-card)}
+.adset__k{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--primary);background:var(--surface-soft);
+  padding:0 13px;display:flex;align-items:center;border-right:1px solid var(--outline)}
+.adset__v{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;
+  color:var(--on-surface);padding:9px 14px}
+.adset__d{font-family:'DM Sans';font-size:12.5px;font-weight:500;color:var(--on-surface-50);
+  display:inline-flex;align-items:center;gap:7px}
+.adset__d::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
 
 /* ============ SCENARIOS ============ */
 .scenwrap{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-card);
@@ -591,7 +608,7 @@ table.scen tbody tr:last-child td{border-bottom:none}
       <!-- Marzo -->
       <div class="tl-item reveal">
         <div class="tl-node n-mar"><i></i></div>
-        <div class="tl-head"><span class="tl-month">⚪ Marzo 2026 · desde el 15</span><h3 class="tl-title">Estrategia y arranque web</h3></div>
+        <div class="tl-head"><span class="tl-month">Marzo 2026 · desde el 15</span><h3 class="tl-title">Estrategia y arranque web</h3></div>
         <h4>Hitos</h4>
         <ul class="clean">
           <li><strong>Entrega del Brand Strategy Deck</strong> (estrategia y storytelling de marca).</li>
@@ -602,7 +619,7 @@ table.scen tbody tr:last-child td{border-bottom:none}
       <!-- Abril -->
       <div class="tl-item reveal">
         <div class="tl-node n-abr"><i></i></div>
-        <div class="tl-head"><span class="tl-month">🟣 Abril 2026</span><h3 class="tl-title">Integración logística y campaña a WhatsApp</h3></div>
+        <div class="tl-head"><span class="tl-month">Abril 2026</span><h3 class="tl-title">Integración logística y campaña a WhatsApp</h3></div>
         <h4>Hitos</h4>
         <ul class="clean">
           <li><strong>Integración con Envía.com (Alhumo)</strong> para precio especial en envíos.</li>
@@ -611,12 +628,15 @@ table.scen tbody tr:last-child td{border-bottom:none}
         </ul>
 
         <h4>Resultados de campaña — WhatsApp</h4>
-        <div class="adset">Ad set: 04/13/26 GENERAL-1 | PUEBLA | WHATS · ~14 días, desde 16 abr</div>
+        <div class="adset"><span class="adset__id"><span class="adset__k">Ad set</span><span class="adset__v">04/13/26 GENERAL-1 | PUEBLA | WHATS</span></span><span class="adset__d">~14 días, desde 16 abr</span></div>
 
         <div class="callout">
-          <span class="tag">Objetivo de optimización</span>
+          <div class="callout__head">
+            <span class="tag">Objetivo de optimización</span>
+            <span class="badge badge--drop"><i></i>Finalizada</span>
+          </div>
           <p>Conversaciones por mensaje (messaging conversations) — generar leads para cierre manual del equipo SQS.</p>
-          <p><strong>Estado: ❌ Finalizada.</strong> Se dio de baja por los limitados resultados de venta (solo 1 cierre de 127 conversaciones). El presupuesto se redirige a la campaña de compras en sitio.</p>
+          <p>Se dio de baja por los limitados resultados de venta (solo 1 cierre de 127 conversaciones). El presupuesto se redirige a la campaña de compras en sitio.</p>
         </div>
 
         <div class="tablewrap">
@@ -642,7 +662,7 @@ table.scen tbody tr:last-child td{border-bottom:none}
       <!-- Mayo -->
       <div class="tl-item reveal">
         <div class="tl-node n-may"><i></i></div>
-        <div class="tl-head"><span class="tl-month">🔵 Mayo 2026</span><h3 class="tl-title">Cierre de Shopify y campaña de compras</h3></div>
+        <div class="tl-head"><span class="tl-month">Mayo 2026</span><h3 class="tl-title">Cierre de Shopify y campaña de compras</h3></div>
         <h4>Hitos</h4>
         <ul class="clean">
           <li><strong>Finalización del sitio en Shopify</strong> (tienda lista para conversión).</li>
@@ -650,7 +670,7 @@ table.scen tbody tr:last-child td{border-bottom:none}
         </ul>
 
         <h4>Resultados de campaña — Compras en sitio</h4>
-        <div class="adset">Ad set: 05/20/26 GENERAL-1 | MEX | SHOPIFY · activa, datos acumulados desde 20 may</div>
+        <div class="adset"><span class="adset__id"><span class="adset__k">Ad set</span><span class="adset__v">05/20/26 GENERAL-1 | MEX | SHOPIFY</span></span><span class="adset__d">activa, datos acumulados desde 20 may</span></div>
 
         <div class="callout">
           <span class="tag">Objetivo de optimización</span>
@@ -682,7 +702,7 @@ table.scen tbody tr:last-child td{border-bottom:none}
       <!-- Junio -->
       <div class="tl-item reveal">
         <div class="tl-node n-jun"><i></i></div>
-        <div class="tl-head"><span class="tl-month">🟢 Junio 2026</span><h3 class="tl-title">Producción de creativos</h3></div>
+        <div class="tl-head"><span class="tl-month">Junio 2026</span><h3 class="tl-title">Producción de creativos</h3></div>
         <h4>Hitos</h4>
         <ul class="clean">
           <li>Pipeline de producción de anuncios por concepto (AMA, Producto-Callouts, Identidad-Callout).</li>
