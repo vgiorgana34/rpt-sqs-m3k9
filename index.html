@@ -202,9 +202,18 @@ thead th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:10.5px
 tbody td{padding:14px 18px;border-bottom:1px solid var(--outline-soft);vertical-align:top;color:var(--on-surface-70)}
 tbody tr:last-child td{border-bottom:none}
 tbody td:first-child{font-weight:600;color:var(--on-surface)}
-table.kv td:first-child{width:54%;color:var(--on-surface-70);font-weight:500}
+/* refined key/value metric sheet */
+table.kv thead{display:none}
+table.kv tbody td{padding:14px 22px;vertical-align:middle;border-bottom:1px solid var(--outline-soft)}
+table.kv tbody tr:nth-child(even){background:var(--surface-softer)}
+table.kv tbody tr:hover{background:var(--surface-soft)}
+table.kv td:first-child{width:56%;color:var(--on-surface-70);font-weight:500;font-size:15px;
+  position:relative;padding-left:34px}
+table.kv td:first-child::before{content:"";position:absolute;left:22px;top:50%;
+  transform:translateY(-50%);width:6px;height:6px;border-radius:50%;
+  background:var(--accent);opacity:.45}
 table.kv td:last-child{font-weight:700;color:var(--on-surface);text-align:right;
-  font-family:'JetBrains Mono',monospace;font-size:14px}
+  font-family:'JetBrains Mono',monospace;font-size:14.5px}
 tbody tr{transition:background .15s}
 tbody tr:hover{background:var(--surface-softer)}
 
@@ -344,15 +353,27 @@ table.scen tbody tr:last-child td{border-bottom:none}
 .scard__list dd{margin:0;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:var(--on-surface);text-align:right}
 
 /* ============ EJES ============ */
-.ejes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
-.eje{background:var(--surface);border:1px solid var(--outline-soft);border-radius:var(--r-lg);padding:24px;
-  box-shadow:var(--sh-card);transition:transform .22s var(--ease),box-shadow .22s var(--ease)}
-.eje:hover{transform:translateY(-3px);box-shadow:var(--sh-hover)}
-.eje .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
-  border-radius:var(--r-full);background:var(--surface-soft);color:var(--primary);font-family:'Outfit';
-  font-weight:900;font-size:14px;margin-bottom:14px}
-.eje h5{font-family:'Outfit';margin:0 0 9px;font-size:17px;font-weight:800;color:var(--on-surface);letter-spacing:-.01em}
-.eje p{font-size:14px;color:var(--on-surface-50);margin:0;line-height:1.55}
+.ejes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
+.eje{position:relative;background:var(--surface);border:1px solid var(--outline-soft);
+  border-radius:var(--r-lg);padding:26px 24px 24px;box-shadow:var(--sh-card);overflow:hidden;
+  transition:transform .22s var(--ease),box-shadow .22s var(--ease)}
+.eje::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;
+  background:var(--eje-c);opacity:.9}
+.eje::after{content:"";position:absolute;right:-42px;top:-42px;width:128px;height:128px;border-radius:50%;
+  background:radial-gradient(circle,var(--eje-glow),transparent 70%);pointer-events:none}
+.eje:hover{transform:translateY(-4px);box-shadow:var(--sh-hover)}
+.eje__top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.eje .num{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;
+  border-radius:var(--r-full);background:var(--eje-c);color:#fff;font-family:'Outfit';
+  font-weight:900;font-size:16px;flex-shrink:0;box-shadow:0 9px 20px -8px var(--eje-c)}
+.eje__kick{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--eje-c)}
+.eje h5{font-family:'Outfit';margin:0 0 11px;font-size:18px;font-weight:800;color:var(--on-surface);
+  letter-spacing:-.01em;line-height:1.2;min-height:2.4em}
+.eje p{font-size:14px;color:var(--on-surface-50);margin:0;line-height:1.6}
+.eje--1{--eje-c:var(--primary);--eje-glow:rgba(111,76,158,.14)}
+.eje--2{--eje-c:var(--accent);--eje-glow:rgba(253,50,123,.15)}
+.eje--3{--eje-c:var(--highlight-deep);--eje-glow:rgba(95,207,250,.18)}
 
 /* ============ INSIGHT CARDS ============ */
 .icards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 8px}
@@ -809,9 +830,9 @@ table.scen tbody tr:last-child td{border-bottom:none}
     <h3 class="reveal">Ejes de optimización</h3>
     <p class="reveal">El ROAS se mueve por tres palancas independientes. Trabajamos cada una como un eje propio:</p>
     <div class="ejes">
-      <div class="eje reveal" data-d="1"><div class="num">1</div><h5>Optimización de CPA</h5><p>Reducir el costo por compra (hoy $333.90). Con presupuesto fijo, es la palanca que más mueve el volumen de pedidos. Se ataca con testing de creativos/ángulos, depuración de públicos y mejora del embudo de conversión en el sitio.</p></div>
-      <div class="eje reveal" data-d="2"><div class="num">2</div><h5>Optimización de ticket promedio</h5><p>Subir el valor de cada pedido (hoy $322.90) con bundles, packs y suscripción. Cada peso de ticket adicional mejora el ROAS sin tocar el CPA.</p></div>
-      <div class="eje reveal" data-d="3"><div class="num">3</div><h5>Optimización de LTV (recompra)</h5><p>Como el snack es consumible, el cliente debería comprar varias veces. Activar recompra (email/WhatsApp post-venta, recordatorios de reposición) convierte un CPA de equilibrio en rentable a lo largo de la vida del cliente. Requiere medir tasa y frecuencia de recompra.</p></div>
+      <div class="eje eje--1 reveal" data-d="1"><div class="eje__top"><div class="num">1</div><span class="eje__kick">Volumen</span></div><h5>Optimización de CPA</h5><p>Reducir el costo por compra (hoy $333.90). Con presupuesto fijo, es la palanca que más mueve el volumen de pedidos. Se ataca con testing de creativos/ángulos, depuración de públicos y mejora del embudo de conversión en el sitio.</p></div>
+      <div class="eje eje--2 reveal" data-d="2"><div class="eje__top"><div class="num">2</div><span class="eje__kick">Valor por pedido</span></div><h5>Optimización de ticket promedio</h5><p>Subir el valor de cada pedido (hoy $322.90) con bundles, packs y suscripción. Cada peso de ticket adicional mejora el ROAS sin tocar el CPA.</p></div>
+      <div class="eje eje--3 reveal" data-d="3"><div class="eje__top"><div class="num">3</div><span class="eje__kick">Recompra</span></div><h5>Optimización de LTV (recompra)</h5><p>Como el snack es consumible, el cliente debería comprar varias veces. Activar recompra (email/WhatsApp post-venta, recordatorios de reposición) convierte un CPA de equilibrio en rentable a lo largo de la vida del cliente. Requiere medir tasa y frecuencia de recompra.</p></div>
     </div>
   </div>
 </section>
