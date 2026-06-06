@@ -181,6 +181,26 @@ h4::before{content:"";width:18px;height:2px;border-radius:2px;background:var(--a
 section p{margin:0 0 14px;color:var(--on-surface-70)}
 strong{color:var(--on-surface);font-weight:700}
 .subnote{color:var(--on-surface-50);font-size:14px;font-style:italic;margin-top:-2px}
+/* ============ COLLAPSIBLE SECTIONS (dropdown) ============ */
+.sec-toggle{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:14px;
+  width:100%;text-align:left;background:none;border:none;padding:0;cursor:pointer;
+  font:inherit;color:inherit}
+.sec-toggle .eyebrow{grid-column:1 / -1;margin-bottom:18px}
+.sec-toggle h2{grid-column:1;margin-bottom:0;transition:color .2s}
+.sec-toggle:hover h2{color:var(--primary)}
+.sec-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:8px;border-radius:14px}
+.sec-chevron{grid-column:2;align-self:center;flex-shrink:0;width:32px;height:32px;border-radius:var(--r-full);
+  display:grid;place-items:center;transition:background .2s,transform .35s var(--ease)}
+.sec-chevron svg{width:22px;height:22px;stroke:var(--on-surface-30);stroke-width:2.2;fill:none;
+  stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s}
+.sec-toggle:hover .sec-chevron{background:var(--surface-soft)}
+.sec-toggle:hover .sec-chevron svg{stroke:var(--accent)}
+section.collapsed .sec-chevron{transform:rotate(-90deg)}
+.sec-body{display:grid;grid-template-rows:1fr;transition:grid-template-rows .4s var(--ease),
+  opacity .3s ease,margin-top .4s var(--ease);margin-top:22px}
+.sec-body__inner{overflow:hidden;min-height:0}
+section.collapsed .sec-body{grid-template-rows:0fr;opacity:0;margin-top:0}
+@media(prefers-reduced-motion:reduce){.sec-body{transition:none}.sec-chevron{transition:none}}
 
 /* ============ CLEAN LIST ============ */
 ul.clean{list-style:none;margin:0 0 8px;padding:0}
@@ -953,6 +973,44 @@ table.scen tbody tr:last-child td{border-bottom:none}
       el.innerHTML=S[sh](c,o);
       layer.appendChild(el);
     });
+  });
+})();
+
+/* ====== COLLAPSIBLE SECTIONS (dropdown) ====== */
+(function(){
+  const CHEV='<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+  document.querySelectorAll('section[id]').forEach(sec=>{
+    const wrap=sec.querySelector('.wrap'); if(!wrap)return;
+    const kids=[...wrap.children];
+    const eyebrow=wrap.querySelector('.eyebrow');
+    const h2=wrap.querySelector('h2');
+    if(!eyebrow||!h2)return;
+    // build toggle from eyebrow + h2
+    const toggle=document.createElement('button');
+    toggle.type='button'; toggle.className='sec-toggle';
+    toggle.setAttribute('aria-expanded','true');
+    toggle.appendChild(eyebrow); toggle.appendChild(h2);
+    const chev=document.createElement('span');
+    chev.className='sec-chevron'; chev.innerHTML=CHEV; toggle.appendChild(chev);
+    // body = everything else, in original order
+    const body=document.createElement('div'); body.className='sec-body';
+    const inner=document.createElement('div'); inner.className='sec-body__inner';
+    body.appendChild(inner);
+    kids.forEach(k=>{ if(k!==eyebrow&&k!==h2) inner.appendChild(k); });
+    wrap.appendChild(toggle); wrap.appendChild(body);
+    toggle.addEventListener('click',()=>{
+      const open=!sec.classList.toggle('collapsed');
+      toggle.setAttribute('aria-expanded',String(open));
+    });
+  });
+  // nav numbers open + scroll to their section
+  window.__openSection=function(id){
+    const sec=document.getElementById(id); if(!sec)return;
+    sec.classList.remove('collapsed');
+    const t=sec.querySelector('.sec-toggle'); if(t)t.setAttribute('aria-expanded','true');
+  };
+  document.querySelectorAll('.secnav a').forEach(a=>{
+    a.addEventListener('click',()=>window.__openSection(a.getAttribute('href').slice(1)));
   });
 })();
 
