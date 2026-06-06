@@ -235,6 +235,8 @@ tbody tr:hover{background:var(--surface-softer)}
 .kpi .val{font-family:'Outfit';font-size:38px;font-weight:900;color:var(--primary-deep);
   letter-spacing:-.02em;line-height:1}
 .kpi .val small{font-size:16px;font-weight:700;color:var(--on-surface-50)}
+.kpi .val .aprx{font-size:18px;font-weight:700;color:var(--on-surface-30)}
+.kpi .val .u{font-size:18px;font-weight:800;color:var(--on-surface-50)}
 .kpi .cap{font-size:13px;color:var(--on-surface-50);margin-top:10px;line-height:1.45}
 .kpi .cap b{color:var(--accent-deep);font-weight:700}
 
@@ -243,8 +245,11 @@ tbody tr:hover{background:var(--surface-softer)}
 .statrow .s{flex:1;min-width:150px;background:var(--surface-soft);border-radius:var(--r-md);padding:16px 18px}
 .statrow .s .l{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
   color:var(--primary);margin-bottom:7px}
-.statrow .s .v{font-family:'Outfit';font-size:26px;font-weight:900;color:var(--primary-deep);letter-spacing:-.01em}
-.statrow .s .v span{font-size:13px;font-weight:600;color:var(--on-surface-50);font-family:'DM Sans'}
+.statrow .s .v{font-family:'Outfit';font-size:28px;font-weight:900;color:var(--primary-deep);
+  letter-spacing:-.01em;display:flex;align-items:baseline;gap:5px;flex-wrap:wrap}
+.statrow .s .v .aprx{font-size:17px;font-weight:700;color:var(--on-surface-30)}
+.statrow .s .v .u{font-size:16px;font-weight:800;color:var(--on-surface-50)}
+.statrow .s .v .sub{font-size:13px;font-weight:600;color:var(--on-surface-50);font-family:'DM Sans'}
 
 /* ============ CALLOUT ============ */
 .callout{background:var(--surface-softer);border:1px solid var(--outline);border-radius:var(--r);
@@ -568,7 +573,7 @@ table.scen tbody tr:last-child td{border-bottom:none}
       <div class="kpi reveal" data-d="3"><div class="label">Compras en sitio (Meta)</div><div class="val"><span class="counter" data-to="9">0</span></div><div class="cap">CPA $333.90</div></div>
       <div class="kpi reveal" data-d="1"><div class="label">Pedidos Shopify (visibles)</div><div class="val"><span class="counter" data-to="10">0</span></div><div class="cap">$3,229 MXN</div></div>
       <div class="kpi reveal" data-d="2"><div class="label">Ticket promedio</div><div class="val"><span class="counter" data-to="322.90" data-decimals="2" data-prefix="$">$0</span> <small>MXN</small></div></div>
-      <div class="kpi reveal" data-d="3"><div class="label">ROAS campaña de compras</div><div class="val">~<span class="counter" data-to="0.97" data-decimals="2">0</span>x</div><div class="cap">equilibrio en 1ª compra</div></div>
+      <div class="kpi reveal" data-d="3"><div class="label">ROAS campaña de compras</div><div class="val"><span class="aprx">~</span><span class="counter" data-to="0.97" data-decimals="2">0</span><span class="u">x</span></div><div class="cap">equilibrio en 1ª compra</div></div>
     </div>
   </div>
 </section>
@@ -766,8 +771,8 @@ table.scen tbody tr:last-child td{border-bottom:none}
     <div class="statrow">
       <div class="s reveal" data-d="1"><div class="l">CPA</div><div class="v"><span class="counter" data-to="333.90" data-decimals="2" data-prefix="$">$0</span></div></div>
       <div class="s reveal" data-d="2"><div class="l">Ticket</div><div class="v"><span class="counter" data-to="322.90" data-decimals="2" data-prefix="$">$0</span></div></div>
-      <div class="s reveal" data-d="3"><div class="l">Pedidos</div><div class="v">~<span class="counter" data-to="10">0</span> <span>en ~16 días</span></div></div>
-      <div class="s reveal" data-d="4"><div class="l">ROAS 1ª compra</div><div class="v">~<span class="counter" data-to="0.97" data-decimals="2">0</span>x</div></div>
+      <div class="s reveal" data-d="3"><div class="l">Pedidos</div><div class="v"><span class="aprx">~</span><span class="counter" data-to="10">0</span><span class="sub">en ~16 días</span></div></div>
+      <div class="s reveal" data-d="4"><div class="l">ROAS 1ª compra</div><div class="v"><span class="aprx">~</span><span class="counter" data-to="0.97" data-decimals="2">0</span><span class="u">x</span></div></div>
     </div>
 
     <h3 class="reveal">Tres escenarios a 90 días</h3>
