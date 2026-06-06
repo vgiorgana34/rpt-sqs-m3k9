@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reporte de Resultados — Simón Quiere Snack · Aigenci</title>
+
+<!-- SEO -->
+<meta name="description" content="Reporte vivo de resultados de Simón Quiere Snack — estrategia, campañas Meta Ads, Shopify y producción creativa. Agencia: Aigenci.">
+<meta name="author" content="Aigenci">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Reporte de Resultados — Simón Quiere Snack · Aigenci">
+<meta property="og:description" content="Reporte vivo de resultados de Simón Quiere Snack — estrategia, campañas Meta Ads, Shopify y producción creativa.">
+<meta property="og:image" content="https://aigenci.sirv.com/AIGENCI/Imagen%20Aigenci%20-%20Open%20Graph.jpg">
+<meta property="og:url" content="https://vgiorgana34.github.io/reporte-simonquieresnack/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reporte de Resultados — Simón Quiere Snack · Aigenci">
+<meta name="twitter:description" content="Reporte vivo de resultados de Simón Quiere Snack — estrategia, campañas Meta Ads, Shopify y producción creativa.">
+<meta name="twitter:image" content="https://aigenci.sirv.com/AIGENCI/Imagen%20Aigenci%20-%20Open%20Graph.jpg">
+<link rel="icon" type="image/png" href="favicon_simonquieresnack.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   REPORTE VIVO · Simón Quiere Snack × Aigenci
+   Estilo: sistema de marca Aigenci (DESIGN.md)
+   Morado profundo · rosa caliente · cian · Outfit + DM Sans
+   Header/footer oscuros · secciones claras · legibilidad primero
+   Contenido/datos = fieles a REPORTE-VIVO.md (intocables)
+   ============================================================ */
+:root{
+  /* core brand */
+  --primary:#6F4C9E;
+  --primary-deep:#312740;
+  --primary-ink:#1F1829;
+  --primary-hero:#2E2340;
+  --accent:#FD327B;
+  --accent-deep:#D4165B;
+  --highlight:#5FCFFA;
+  --highlight-deep:#2FA9D6;
+  --whatsapp:#25D366;
+
+  /* surfaces */
+  --surface:#FFFFFF;
+  --surface-soft:#EEECFF;
+  --surface-softer:#F6F4FF;
+  --bg:#F6F4FF;
+  --bg-dark:#2E2340;
+
+  /* ink */
+  --on-surface:#1B1124;
+  --on-surface-70:#4a3d58;
+  --on-surface-50:#7b7188;
+  --on-surface-30:#b7b0bf;
+
+  /* lines */
+  --outline:#e5e1ed;
+  --outline-soft:#efecf4;
+  --outline-primary:rgba(111,76,158,0.18);
+
+  /* glass (dark) */
+  --glass:rgba(255,255,255,0.05);
+  --glass-2:rgba(255,255,255,0.07);
+  --glass-border:rgba(255,255,255,0.12);
+
+  --maxw:980px;
+  --r-sm:12px; --r-md:18px; --r:22px; --r-lg:28px; --r-xl:34px; --r-full:9999px;
+  --sh-card:0 2px 14px -6px rgba(31,24,41,0.10);
+  --sh-hover:0 14px 34px -14px rgba(111,76,158,0.40);
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  margin:0;background:var(--bg);color:var(--on-surface-70);
+  font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+::selection{background:rgba(111,76,158,0.22)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+h1,h2,h3,h4,h5{text-wrap:balance;margin:0}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.disp{font-family:'Outfit',system-ui,sans-serif}
+
+/* ============ STICKER DECOR LAYER ============ */
+.deco{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}
+.sk{position:absolute;will-change:transform}
+@keyframes floatY{0%,100%{transform:translateY(-8px) rotate(var(--rot,0deg))}50%{transform:translateY(8px) rotate(calc(var(--rot,0deg) + 4deg))}}
+@keyframes floatX{0%,100%{transform:translateX(-6px)}50%{transform:translateX(6px)}}
+@keyframes spinRing{to{transform:rotate(360deg)}}
+.sk.fy{animation:floatY 6s ease-in-out infinite}
+.sk.fx{animation:floatX 7s ease-in-out infinite}
+
+/* ============ STICKY NAV ============ */
+.topnav{position:sticky;top:0;z-index:50;background:rgba(46,35,64,0.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.08)}
+.topnav__inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:64px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;color:#fff}
+.brand__logo{width:36px;height:36px;border-radius:var(--r-full);background:#fff;
+  display:grid;place-items:center;flex-shrink:0;box-shadow:0 4px 12px -4px rgba(0,0,0,.4)}
+.brand__logo img{width:26px;height:26px;object-fit:contain}
+.brand__txt{display:flex;flex-direction:column;line-height:1.1}
+.brand__txt b{font-family:'Outfit';font-weight:800;font-size:15px;letter-spacing:-.01em}
+.brand__txt small{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--highlight)}
+.secnav{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.secnav a{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:rgba(255,255,255,.6);
+  width:30px;height:30px;display:grid;place-items:center;border-radius:var(--r-full);
+  border:1px solid rgba(255,255,255,.10);transition:.2s}
+.secnav a:hover,.secnav a.active{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ============ LAYOUT ============ */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ============ HERO (dark) ============ */
+.hero{position:relative;background:var(--primary-hero);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(620px 320px at 12% 18%, rgba(111,76,158,0.55), transparent 60%),
+    radial-gradient(460px 320px at 92% 78%, rgba(253,50,123,0.16), transparent 60%)}
+.hero__inner{position:relative;z-index:3;max-width:var(--maxw);margin:0 auto;
+  padding:30px 24px 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.hero__eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:800;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--highlight);margin-bottom:22px}
+.hero__eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 4px rgba(253,50,123,.22)}
+.hero h1{font-family:'Outfit';font-weight:900;font-size:clamp(40px,7vw,68px);line-height:1.0;
+  letter-spacing:-.03em;color:#fff;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero__tagline{font-size:18px;color:rgba(255,255,255,.82);font-weight:500;margin-bottom:26px}
+.hero__tagline b{color:var(--highlight);font-weight:700}
+.metagrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:520px}
+.meta{background:var(--glass-2);border:1px solid var(--glass-border);border-radius:var(--r-md);
+  padding:13px 16px}
+.meta dt{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:5px}
+.meta dd{margin:0;font-weight:700;color:#fff;font-size:14px;font-family:'Outfit'}
+.hero__lede{margin:26px 0 0;color:rgba(255,255,255,.7);font-size:15px;max-width:520px}
+
+/* hero avatar (SQS dog) */
+.avatar{position:relative;width:188px;height:188px;flex-shrink:0;z-index:3}
+.avatar__ring{position:absolute;inset:-14px;border-radius:50%;border:1.5px dashed rgba(95,207,250,.45);
+  animation:spinRing 60s linear infinite}
+.avatar__photo{position:relative;width:100%;height:100%;border-radius:50%;background:#fff;
+  display:grid;place-items:center;
+  box-shadow:0 30px 60px -25px rgba(0,0,0,.55), 0 0 0 4px rgba(255,255,255,.10)}
+.avatar__photo img{width:74%;height:74%;object-fit:contain}
+.avatar__badge{position:absolute;right:-4px;bottom:14px;display:flex;align-items:center;gap:7px;
+  background:var(--accent);color:#fff;font-size:11.5px;font-weight:800;
+  padding:7px 13px 7px 10px;border-radius:var(--r-full);
+  box-shadow:0 10px 22px -8px rgba(253,50,123,.6)}
+.avatar__badge i{width:8px;height:8px;border-radius:50%;background:var(--highlight);
+  box-shadow:0 0 0 4px rgba(95,207,250,.3);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(95,207,250,.3)}50%{box-shadow:0 0 0 7px rgba(95,207,250,0)}}
+
+/* ============ SECTIONS (light) ============ */
+section{position:relative;padding:80px 0;border-bottom:1px solid var(--outline-soft)}
+section .wrap{position:relative;z-index:3}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.eyebrow .num{width:30px;height:30px;border-radius:var(--r-full);background:var(--accent);color:#fff;
+  display:grid;place-items:center;font-family:'Outfit';font-weight:900;font-size:14px;flex-shrink:0;
+  box-shadow:0 8px 18px -8px rgba(253,50,123,.55)}
+.eyebrow .lbl{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--primary)}
+h2{font-family:'Outfit';font-weight:900;font-size:clamp(30px,4.4vw,44px);line-height:1.06;
+  letter-spacing:-.025em;color:var(--on-surface);margin-bottom:10px}
+h2 em{font-style:normal;color:var(--accent)}
+.sec-lede{font-size:17px;color:var(--on-surface-50);max-width:680px;margin:0 0 8px}
+h3{font-family:'Outfit';font-weight:800;font-size:21px;letter-spacing:-.01em;color:var(--on-surface);
+  margin:38px 0 14px}
+h4{font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);
+  margin:26px 0 12px;display:flex;align-items:center;gap:9px}
+h4::before{content:"";width:18px;height:2px;border-radius:2px;background:var(--accent)}
+section p{margin:0 0 14px;color:var(--on-surface-70)}
+strong{color:var(--on-surface);font-weight:700}
+.subnote{color:var(--on-surface-50);font-size:14px;font-style:italic;margin-top:-2px}
+
+/* ============ CLEAN LIST ============ */
+ul.clean{list-style:none;margin:0 0 8px;padding:0}
+ul.clean>li{position:relative;padding:11px 0 11px 28px;border-bottom:1px solid var(--outline-soft);
+  color:var(--on-surface-70)}
+ul.clean>li:last-child{border-bottom:none}
+ul.clean>li::before{content:"";position:absolute;left:3px;top:19px;width:8px;height:8px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 0 4px rgba(253,50,123,.12)}
+
+/* ============ CARDS / TABLES ============ */
+.card{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--sh-card);
+  border:1px solid var(--outline-soft)}
+.tablewrap{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-card);
+  border:1px solid var(--outline-soft);margin:8px 0 20px}
+table{width:100%;border-collapse:collapse;background:var(--surface);font-size:15px}
+thead th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--primary);font-weight:600;padding:14px 18px;
+  background:var(--surface-softer);border-bottom:1px solid var(--outline)}
+tbody td{padding:14px 18px;border-bottom:1px solid var(--outline-soft);vertical-align:top;color:var(--on-surface-70)}
+tbody tr:last-child td{border-bottom:none}
+tbody td:first-child{font-weight:600;color:var(--on-surface)}
+table.kv td:first-child{width:54%;color:var(--on-surface-70);font-weight:500}
+table.kv td:last-child{font-weight:700;color:var(--on-surface);text-align:right;
+  font-family:'JetBrains Mono',monospace;font-size:14px}
+tbody tr{transition:background .15s}
+tbody tr:hover{background:var(--surface-softer)}
+
+/* ============ BADGES ============ */
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;
+  padding:5px 12px;border-radius:var(--r-full);white-space:nowrap;line-height:1.3;
+  font-family:'DM Sans';letter-spacing:.01em}
+.badge i{width:6px;height:6px;border-radius:50%;display:inline-block}
+.badge--done{background:rgba(37,211,102,.12);color:#159a4b;border:1px solid rgba(37,211,102,.3)}
+.badge--done i{background:var(--whatsapp)}
+.badge--prog{background:rgba(95,207,250,.14);color:var(--highlight-deep);border:1px solid rgba(95,207,250,.32)}
+.badge--prog i{background:var(--highlight-deep)}
+.badge--live{background:var(--accent);color:#fff;border:1px solid var(--accent)}
+.badge--live i{background:#fff;animation:pulse2 1.6s ease-in-out infinite}
+@keyframes pulse2{0%,100%{opacity:1}50%{opacity:.35}}
+.badge--drop{background:#fff;color:var(--on-surface-50);border:1px dashed var(--on-surface-30)}
+.badge--drop i{background:var(--on-surface-30)}
+
+/* ============ KPI CARDS ============ */
+.kpigrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:10px 0 6px}
+.kpi{background:var(--surface-soft);border-radius:var(--r-xl);padding:24px;position:relative;
+  overflow:hidden;transition:transform .22s var(--ease),box-shadow .22s var(--ease)}
+.kpi::after{content:"";position:absolute;right:-30px;bottom:-30px;width:90px;height:90px;border-radius:50%;
+  background:radial-gradient(circle,rgba(253,50,123,.16),transparent 70%);pointer-events:none}
+.kpi:hover{transform:translateY(-3px);box-shadow:var(--sh-hover)}
+.kpi .label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--primary);margin-bottom:14px;min-height:24px;line-height:1.3}
+.kpi .val{font-family:'Outfit';font-size:38px;font-weight:900;color:var(--primary-deep);
+  letter-spacing:-.02em;line-height:1}
+.kpi .val small{font-size:16px;font-weight:700;color:var(--on-surface-50)}
+.kpi .cap{font-size:13px;color:var(--on-surface-50);margin-top:10px;line-height:1.45}
+.kpi .cap b{color:var(--accent-deep);font-weight:700}
+
+/* compact stat row */
+.statrow{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 18px}
+.statrow .s{flex:1;min-width:150px;background:var(--surface-soft);border-radius:var(--r-md);padding:16px 18px}
+.statrow .s .l{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--primary);margin-bottom:7px}
+.statrow .s .v{font-family:'Outfit';font-size:26px;font-weight:900;color:var(--primary-deep);letter-spacing:-.01em}
+.statrow .s .v span{font-size:13px;font-weight:600;color:var(--on-surface-50);font-family:'DM Sans'}
+
+/* ============ CALLOUT ============ */
+.callout{background:var(--surface-softer);border:1px solid var(--outline);border-radius:var(--r);
+  padding:20px 22px;margin:16px 0;position:relative;overflow:hidden}
+.callout::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--primary)}
+.callout .tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--primary);border:1px solid var(--outline-primary);
+  border-radius:6px;padding:3px 9px;margin-bottom:11px}
+.callout p{margin:0 0 8px;font-size:14.5px;color:var(--on-surface-70)}
+.callout p:last-child{margin:0}
+.callout--warn{background:linear-gradient(90deg,rgba(253,50,123,.07),rgba(253,50,123,.02))}
+.callout--warn::before{background:var(--accent)}
+.callout--warn .tag{color:var(--accent-deep);border-color:rgba(253,50,123,.3);background:rgba(253,50,123,.06)}
+
+/* ============ TIMELINE ============ */
+.timeline{position:relative;margin-top:18px;padding-left:38px}
+.timeline::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;
+  background:linear-gradient(180deg,var(--outline),var(--accent),var(--highlight),var(--outline))}
+.tl-item{position:relative;padding-bottom:44px}
+.tl-item:last-child{padding-bottom:4px}
+.tl-node{position:absolute;left:-38px;top:0;width:24px;height:24px;border-radius:50%;
+  background:#fff;border:2px solid var(--outline);display:grid;place-items:center;z-index:1}
+.tl-node i{display:block;border-radius:50%}
+.tl-node.n-mar i{width:9px;height:9px;background:var(--on-surface-30)}
+.tl-node.n-abr i{width:11px;height:11px;background:var(--primary)}
+.tl-node.n-abr{border-color:var(--primary)}
+.tl-node.n-may i{width:11px;height:11px;background:var(--highlight-deep)}
+.tl-node.n-may{border-color:var(--highlight)}
+.tl-node.n-jun i{width:11px;height:11px;background:var(--accent)}
+.tl-node.n-jun{border-color:var(--accent);box-shadow:0 0 0 4px rgba(253,50,123,.14)}
+.tl-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:2px}
+.tl-month{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--primary)}
+.tl-title{font-family:'Outfit';font-size:21px;font-weight:800;color:var(--on-surface);letter-spacing:-.01em;margin:0}
+.adset{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--on-surface-50);
+  background:var(--surface-softer);border:1px solid var(--outline);border-radius:8px;
+  padding:7px 12px;display:inline-block;margin:4px 0 14px}
+
+/* ============ SCENARIOS ============ */
+.scenwrap{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-card);
+  border:1px solid var(--outline-soft);margin:16px 0 18px}
+table.scen{width:100%;border-collapse:collapse;font-size:15px;background:var(--surface)}
+table.scen th,table.scen td{padding:15px 16px;border-bottom:1px solid var(--outline-soft);text-align:right}
+table.scen thead th{text-align:right;background:var(--surface-softer);border-bottom:1px solid var(--outline)}
+table.scen th:first-child,table.scen td:first-child{text-align:left;width:32%}
+table.scen tbody td:first-child{font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--on-surface-50);font-weight:700;font-family:'DM Sans'}
+.scen-h{display:flex;flex-direction:column;gap:5px;align-items:flex-end}
+.scen-h .nm{font-family:'Outfit';font-size:16px;font-weight:900;color:var(--on-surface);letter-spacing:-.01em}
+.scen-h .tg{font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--on-surface-50);border:1px solid var(--outline);border-radius:var(--r-full);padding:2px 9px}
+table.scen tbody td{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--on-surface);font-size:14px}
+.col-emph{background:linear-gradient(180deg,rgba(111,76,158,.07),rgba(111,76,158,.02));
+  box-shadow:inset 2px 0 0 var(--accent),inset -2px 0 0 var(--accent)}
+thead .col-emph .nm{color:var(--primary-deep)}
+thead .col-emph .tg{color:#fff;background:var(--accent);border-color:var(--accent)}
+table.scen tbody tr:last-child td{border-bottom:none}
+
+/* scenario cards (mobile only — generated from the table, no data duplication) */
+.scen-cards{display:none;flex-direction:column;gap:14px;margin:16px 0 18px}
+.scard{background:var(--surface);border:1px solid var(--outline-soft);border-radius:var(--r-lg);
+  padding:20px 22px;box-shadow:var(--sh-card)}
+.scard.is-emph{border:1.5px solid var(--accent);box-shadow:0 14px 34px -16px rgba(253,50,123,.40)}
+.scard__h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;
+  padding-bottom:13px;border-bottom:1px solid var(--outline-soft)}
+.scard__nm{font-family:'Outfit';font-size:19px;font-weight:900;color:var(--on-surface);letter-spacing:-.01em}
+.scard__tg{font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--on-surface-50);border:1px solid var(--outline);border-radius:var(--r-full);padding:3px 10px;white-space:nowrap}
+.scard.is-emph .scard__tg{background:var(--accent);border-color:var(--accent);color:#fff}
+.scard__list{margin:0;display:flex;flex-direction:column}
+.scard__list>div{display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:9px 0;border-bottom:1px solid var(--outline-soft)}
+.scard__list>div:last-child{border-bottom:none}
+.scard__list dt{margin:0;font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--on-surface-50)}
+.scard__list dd{margin:0;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:var(--on-surface);text-align:right}
+
+/* ============ EJES ============ */
+.ejes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
+.eje{background:var(--surface);border:1px solid var(--outline-soft);border-radius:var(--r-lg);padding:24px;
+  box-shadow:var(--sh-card);transition:transform .22s var(--ease),box-shadow .22s var(--ease)}
+.eje:hover{transform:translateY(-3px);box-shadow:var(--sh-hover)}
+.eje .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+  border-radius:var(--r-full);background:var(--surface-soft);color:var(--primary);font-family:'Outfit';
+  font-weight:900;font-size:14px;margin-bottom:14px}
+.eje h5{font-family:'Outfit';margin:0 0 9px;font-size:17px;font-weight:800;color:var(--on-surface);letter-spacing:-.01em}
+.eje p{font-size:14px;color:var(--on-surface-50);margin:0;line-height:1.55}
+
+/* ============ INSIGHT CARDS ============ */
+.icards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 8px}
+.icard{background:var(--surface);border:1px solid var(--outline-soft);border-radius:var(--r-lg);
+  padding:22px;box-shadow:var(--sh-card);display:flex;flex-direction:column;
+  transition:transform .22s var(--ease),box-shadow .22s var(--ease)}
+.icard:hover{transform:translateY(-3px);box-shadow:var(--sh-hover)}
+.icard .ix{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--on-surface-50);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.icard .ix .n{font-family:'JetBrains Mono',monospace;color:var(--primary)}
+.icard .ix .src{color:var(--accent-deep);background:rgba(253,50,123,.08);
+  border:1px solid rgba(253,50,123,.22);border-radius:var(--r-full);padding:3px 10px}
+.icard h5{font-family:'Outfit';margin:0 0 10px;font-size:17px;font-weight:800;color:var(--on-surface);
+  line-height:1.25;letter-spacing:-.01em}
+.icard p{font-size:13.5px;color:var(--on-surface-50);margin:0;line-height:1.55}
+
+/* ============ BITÁCORA LINK ============ */
+.biblink{display:flex;align-items:center;gap:14px;margin-top:22px;cursor:pointer;
+  background:var(--primary-deep);border:none;border-radius:var(--r);padding:18px 22px;
+  color:#fff;font-family:inherit;font-size:15px;font-weight:700;width:100%;justify-content:space-between;
+  box-shadow:0 16px 40px -18px rgba(111,76,158,.6);transition:transform .18s var(--ease),box-shadow .2s}
+.biblink:hover{transform:translateY(-2px);box-shadow:0 22px 48px -18px rgba(111,76,158,.7)}
+.biblink .bl-l{display:flex;align-items:center;gap:14px}
+.biblink .bl-ic{width:38px;height:38px;border-radius:var(--r-full);background:var(--accent);
+  display:grid;place-items:center;flex-shrink:0}
+.biblink .bl-ic svg{width:19px;height:19px}
+.biblink .bl-meta{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--highlight);font-weight:500}
+.biblink .bl-arrow{font-family:'JetBrains Mono',monospace;color:rgba(255,255,255,.6);font-size:18px}
+
+/* ============ FOOTER (dark) ============ */
+.footer{position:relative;background:var(--primary-hero);color:#fff;overflow:hidden;
+  padding:72px 0 40px;border-bottom:none}
+.footer::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(60% 80% at 100% 0%, rgba(253,50,123,.16), transparent 60%),
+    radial-gradient(60% 80% at 0% 100%, rgba(95,207,250,.12), transparent 60%)}
+.footer__inner{position:relative;z-index:3;max-width:var(--maxw);margin:0 auto;padding:0 24px;text-align:center}
+.footer__pre{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--highlight);margin-bottom:16px}
+.footer h2{font-family:'Outfit';font-weight:900;font-size:clamp(30px,5vw,50px);color:#fff;
+  letter-spacing:-.025em;line-height:1.05;margin-bottom:16px}
+.footer h2 em{font-style:normal;color:var(--accent)}
+.footer__sub{color:rgba(255,255,255,.7);font-size:16px;max-width:520px;margin:0 auto}
+.footer__cadence{display:inline-flex;align-items:center;gap:0;margin-top:30px;
+  background:var(--glass-2);border:1px solid var(--glass-border);border-radius:var(--r-full);padding:8px 16px}
+.cad{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;padding:3px 8px;border-radius:var(--r-full)}
+.cad.done{color:rgba(255,255,255,.5)}
+.cad.now{color:#fff;background:var(--accent);box-shadow:0 6px 16px -6px rgba(253,50,123,.7)}
+.cad.next{color:var(--highlight);border:1px dashed rgba(95,207,250,.45)}
+.cad-sep{width:14px;height:2px;border-radius:2px;background:rgba(255,255,255,.22);margin:0 2px}
+.cad-sep.next{background:repeating-linear-gradient(90deg,rgba(95,207,250,.5) 0 4px,transparent 4px 7px)}
+.footer__meta{position:relative;z-index:3;max-width:var(--maxw);margin:48px auto 0;padding:24px 24px 0;
+  border-top:1px solid rgba(255,255,255,.10);display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap}
+.footer__brand{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.85);font-weight:600}
+.footer__brand .d{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.footer__brand img{width:22px;height:22px;background:#fff;border-radius:50%;padding:2px}
+.footer__legal{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.04em}
+.footer__legal a{color:var(--highlight)}
+
+/* ============ DRAWER ============ */
+.scrim{position:fixed;inset:0;background:rgba(31,24,41,.55);backdrop-filter:blur(3px);
+  opacity:0;visibility:hidden;transition:.25s;z-index:90}
+.scrim.open{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(580px,100%);background:var(--bg);
+  box-shadow:-12px 0 40px rgba(31,24,41,.2);transform:translateX(100%);
+  transition:transform .3s var(--ease);z-index:91;display:flex;flex-direction:column}
+.drawer.open{transform:translateX(0)}
+.drawer__head{padding:26px 30px;background:var(--primary-hero);color:#fff;position:relative;overflow:hidden;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.drawer__head::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(400px 200px at 100% 0%,rgba(253,50,123,.25),transparent 60%)}
+.drawer__head>div{position:relative;z-index:2}
+.dt-eyebrow{font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--highlight);margin-bottom:8px}
+.drawer__head h3{font-family:'Outfit';margin:0;font-size:23px;font-weight:900;color:#fff;letter-spacing:-.01em}
+.dt-sub{font-size:13px;color:rgba(255,255,255,.7);margin-top:8px}
+.xbtn{position:relative;z-index:2;flex-shrink:0;width:38px;height:38px;border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--r-full);background:rgba(255,255,255,.08);cursor:pointer;font-size:16px;color:#fff;
+  display:grid;place-items:center;transition:.18s;line-height:1}
+.xbtn:hover{background:var(--accent);border-color:var(--accent)}
+.drawer__body{padding:28px 30px;overflow-y:auto;flex:1}
+.logitem{position:relative;padding:0 0 26px 30px;border-left:2px solid var(--outline);margin-left:6px}
+.logitem:last-child{padding-bottom:4px}
+.logitem::before{content:"";position:absolute;left:-8px;top:3px;width:14px;height:14px;border-radius:50%;
+  background:#fff;border:2px solid var(--accent)}
+.logitem .ln{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--primary);margin-bottom:7px;font-family:'JetBrains Mono',monospace}
+.logitem p{margin:0;font-size:14px;line-height:1.6;color:var(--on-surface-70)}
+.logitem p strong{color:var(--on-surface)}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+[data-d="1"]{transition-delay:.06s}[data-d="2"]{transition-delay:.14s}
+[data-d="3"]{transition-delay:.22s}[data-d="4"]{transition-delay:.30s}
+[data-d="5"]{transition-delay:.38s}[data-d="6"]{transition-delay:.46s}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:760px){
+  .hero__inner{grid-template-columns:1fr;gap:34px;padding-bottom:54px}
+  .avatar{order:-1;width:150px;height:150px}
+  section{padding:60px 0}
+  .kpigrid,.ejes,.icards{grid-template-columns:1fr}
+  .drawer{width:100%}
+  .secnav{display:none}
+  .statrow .s{min-width:calc(50% - 6px)}
+}
+@media(max-width:620px){
+  .scenwrap{display:none}
+  .scen-cards{display:flex}
+}
+@media(max-width:520px){
+  .metagrid{grid-template-columns:1fr}
+  .footer__meta{justify-content:center;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+  .sk,.avatar__ring{animation-duration:.001ms!important}
+  .reveal{transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== STICKY NAV ===================== -->
+<nav class="topnav">
+  <div class="topnav__inner">
+    <a class="brand" href="#top">
+      <span class="brand__logo"><img src="favicon_simonquieresnack.png" alt="Simón Quiere Snack"></span>
+      <span class="brand__txt">
+        <b>Simón Quiere Snack</b>
+        <small>Reporte vivo</small>
+      </span>
+    </a>
+    <div class="secnav">
+      <a href="#s1" title="Objetivos y contexto">1</a>
+      <a href="#s2" title="Resumen general">2</a>
+      <a href="#s3" title="Alcance de servicios">3</a>
+      <a href="#s4" title="Histórico">4</a>
+      <a href="#s5" title="Insights">5</a>
+      <a href="#s6" title="Estrategia hacia adelante">6</a>
+      <a href="#s7" title="Glosario">7</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO HEADER ===================== -->
+<header class="hero" id="top" data-deco="hero">
+  <div class="deco"></div>
+  <div class="hero__inner">
+    <div>
+      <div class="hero__eyebrow">Reporte de Resultados · Aigenci</div>
+      <h1>Simón <em>Quiere</em> Snack</h1>
+      <p class="hero__tagline">"Natural como su <b>amor por ti</b>"</p>
+      <dl class="metagrid">
+        <div class="meta"><dt>Cliente</dt><dd>Simón Quiere Snack</dd></div>
+        <div class="meta"><dt>Agencia</dt><dd>Aigenci</dd></div>
+        <div class="meta"><dt>Inicio de actividades</dt><dd>15 mar 2026</dd></div>
+        <div class="meta"><dt>Última actualización</dt><dd>5 jun 2026</dd></div>
+      </dl>
+      <p class="hero__lede">Reporte vivo de la cuenta. Se actualiza al cierre de cada mes con hitos y resultados de campaña.</p>
+    </div>
+    <div class="avatar">
+      <span class="avatar__ring"></span>
+      <span class="avatar__photo"><img src="favicon_simonquieresnack.png" alt="Simón Quiere Snack"></span>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== 1. OBJETIVOS Y CONTEXTO ===================== -->
+<section id="s1" data-deco="light-a">
+  <div class="deco"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="num">01</span><span class="lbl">Contexto</span></div>
+    <h2 class="reveal">Objetivos y contexto del proyecto</h2>
+    <p class="reveal" data-d="1"><strong>Punto de partida (marzo 2026).</strong> Simón Quiere Snack llega con un producto radicalmente diferenciado —un solo ingrediente: punta de ala de pollo deshidratada artesanalmente—, 4 años en el mercado con cero quejas, y las primeras ventas llegando por Facebook Ads. Faltaba estructura: estrategia de marca, infraestructura digital sólida y una máquina de adquisición optimizada.</p>
+    <h4 class="reveal">Objetivos del proyecto</h4>
+    <ul class="clean reveal" data-d="1">
+      <li>Construir una identidad y estrategia de marca claras y diferenciadas.</li>
+      <li>Desarrollar una tienda online (Shopify) lista para convertir.</li>
+      <li>Resolver la logística de envíos a un costo competitivo.</li>
+      <li>Activar y escalar la adquisición pagada en Meta (WhatsApp y compras en sitio).</li>
+      <li>Establecer un sistema creativo repetible (Creative Bible + producción de anuncios).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== 2. RESUMEN GENERAL ===================== -->
+<section id="s2" data-deco="light-b">
+  <div class="deco"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="num">02</span><span class="lbl">Resumen</span></div>
+    <h2 class="reveal">Resumen general</h2>
+    <p class="reveal" data-d="1">Desde el 15 de marzo, el trabajo avanzó en tres olas: <strong>estrategia y desarrollo web (marzo)</strong>, <strong>integración logística + primera campaña a WhatsApp (abril)</strong> y <strong>cierre de Shopify + campaña de compras en el sitio (mayo)</strong>. Hoy estamos en <strong>producción de creativos y optimización de la adquisición</strong>.</p>
+
+    <div class="tablewrap reveal" data-d="1">
+      <table>
+        <thead><tr><th>Dimensión</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr><td>Brand Strategy Deck</td><td><span class="badge badge--done"><i></i>Entregado (marzo)</span></td></tr>
+          <tr><td>Desarrollo web (Shopify)</td><td><span class="badge badge--done"><i></i>Finalizado (mayo)</span></td></tr>
+          <tr><td>Integración de envíos (Envía.com / Alhumo)</td><td><span class="badge badge--done"><i></i>Integrado (abril)</span></td></tr>
+          <tr><td>Campaña Meta → WhatsApp</td><td><span class="badge badge--drop"><i></i>Finalizada (abril) — bajos resultados</span></td></tr>
+          <tr><td>Campaña de compras en sitio</td><td><span class="badge badge--prog"><i></i>En curso (desde mayo)</span></td></tr>
+          <tr><td>Creative Bible y conceptos</td><td><span class="badge badge--done"><i></i>Completado</span></td></tr>
+          <tr><td>Producción de anuncios</td><td><span class="badge badge--prog"><i></i>En curso (junio)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="reveal">Resultados clave (acumulado)</h4>
+    <p class="subnote reveal">Se actualiza con los datos de campaña.</p>
+    <div class="kpigrid">
+      <div class="kpi reveal" data-d="1"><div class="label">Inversión total en Meta</div><div class="val"><span class="counter" data-to="5339.23" data-decimals="2" data-prefix="$">$0</span> <small>MXN</small></div><div class="cap">WhatsApp $2,334.11 + Compras $3,005.12</div></div>
+      <div class="kpi reveal" data-d="2"><div class="label">Conversaciones WhatsApp</div><div class="val"><span class="counter" data-to="127">0</span></div><div class="cap"><b>1</b> venta cerrada</div></div>
+      <div class="kpi reveal" data-d="3"><div class="label">Compras en sitio (Meta)</div><div class="val"><span class="counter" data-to="9">0</span></div><div class="cap">CPA $333.90</div></div>
+      <div class="kpi reveal" data-d="1"><div class="label">Pedidos Shopify (visibles)</div><div class="val"><span class="counter" data-to="10">0</span></div><div class="cap">$3,229 MXN</div></div>
+      <div class="kpi reveal" data-d="2"><div class="label">Ticket promedio</div><div class="val"><span class="counter" data-to="322.90" data-decimals="2" data-prefix="$">$0</span> <small>MXN</small></div></div>
+      <div class="kpi reveal" data-d="3"><div class="label">ROAS campaña de compras</div><div class="val">~<span class="counter" data-to="0.97" data-decimals="2">0</span>x</div><div class="cap">equilibrio en 1ª compra</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 3. ALCANCE DE SERVICIOS ===================== -->
+<section id="s3" data-deco="light-a">
+  <div class="deco"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="num">03</span><span class="lbl">Alcance</span></div>
+    <h2 class="reveal">Alcance de servicios y entregables</h2>
+    <div class="tablewrap reveal" data-d="1">
+      <table>
+        <thead><tr><th>Servicio</th><th>Entregables</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Estrategia de marca</strong></td><td>Brand Strategy Deck, Brand Profile, Análisis Competitivo</td><td><span class="badge badge--done"><i></i>Listo</span></td></tr>
+          <tr><td><strong>Sistema creativo</strong></td><td>Creative Bible completa, Biblioteca de Conceptos, Niveles de Consciencia, evaluación de conceptos</td><td><span class="badge badge--done"><i></i>Listo</span></td></tr>
+          <tr><td><strong>Desarrollo web</strong></td><td>Arquitectura web, tienda Shopify, favicon</td><td><span class="badge badge--done"><i></i>Listo</span></td></tr>
+          <tr><td><strong>Logística</strong></td><td>Integración Envía.com (Alhumo) — precio especial de envíos</td><td><span class="badge badge--done"><i></i>Listo</span></td></tr>
+          <tr><td><strong>Adquisición (Meta Ads)</strong></td><td>Campaña a WhatsApp, campaña de compras en sitio, Plan de Optimización Estratégica</td><td><span class="badge badge--prog"><i></i>En curso</span></td></tr>
+          <tr><td><strong>Producción de anuncios</strong></td><td>Anuncios AMA, Producto-Callouts, Identidad-Callout, banco de fotografía de producto</td><td><span class="badge badge--prog"><i></i>En curso</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 4. HISTÓRICO ===================== -->
+<section id="s4" data-deco="light-b">
+  <div class="deco"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="num">04</span><span class="lbl">Histórico</span></div>
+    <h2 class="reveal">Hitos y resultados de campaña</h2>
+    <p class="subnote reveal">Orden cronológico: del mes más antiguo al más reciente conforme se baja.</p>
+
+    <div class="timeline">
+
+      <!-- Marzo -->
+      <div class="tl-item reveal">
+        <div class="tl-node n-mar"><i></i></div>
+        <div class="tl-head"><span class="tl-month">⚪ Marzo 2026 · desde el 15</span><h3 class="tl-title">Estrategia y arranque web</h3></div>
+        <h4>Hitos</h4>
+        <ul class="clean">
+          <li><strong>Entrega del Brand Strategy Deck</strong> (estrategia y storytelling de marca).</li>
+          <li><strong>Inicio del desarrollo web</strong> (Shopify).</li>
+          <li>Onboarding: producto de un solo ingrediente (pollo deshidratado artesanal), 4 años en el mercado con cero quejas, primeras ventas vía Facebook Ads.</li>
+        </ul>
+      </div>
+
+      <!-- Abril -->
+      <div class="tl-item reveal">
+        <div class="tl-node n-abr"><i></i></div>
+        <div class="tl-head"><span class="tl-month">🟣 Abril 2026</span><h3 class="tl-title">Integración logística y campaña a WhatsApp</h3></div>
+        <h4>Hitos</h4>
+        <ul class="clean">
+          <li><strong>Integración con Envía.com (Alhumo)</strong> para precio especial en envíos.</li>
+          <li><strong>Campaña de ads en Meta dirigida a WhatsApp</strong> (conversación / lead).</li>
+          <li>Fundamentos creativos: Brand Profile, Creative Bible completa, Biblioteca de Conceptos, Niveles de Consciencia y Arquitectura Web.</li>
+        </ul>
+
+        <h4>Resultados de campaña — WhatsApp</h4>
+        <div class="adset">Ad set: 04/13/26 GENERAL-1 | PUEBLA | WHATS · ~14 días, desde 16 abr</div>
+
+        <div class="callout">
+          <span class="tag">Objetivo de optimización</span>
+          <p>Conversaciones por mensaje (messaging conversations) — generar leads para cierre manual del equipo SQS.</p>
+          <p><strong>Estado: ❌ Finalizada.</strong> Se dio de baja por los limitados resultados de venta (solo 1 cierre de 127 conversaciones). El presupuesto se redirige a la campaña de compras en sitio.</p>
+        </div>
+
+        <div class="tablewrap">
+          <table class="kv">
+            <thead><tr><th>Métrica</th><th>Valor</th></tr></thead>
+            <tbody>
+              <tr><td>Inversión</td><td>$2,334.11 MXN</td></tr>
+              <tr><td>Conversaciones iniciadas</td><td>127</td></tr>
+              <tr><td>Costo por conversación</td><td>$18.38 MXN</td></tr>
+              <tr><td>Ventas cerradas (equipo SQS)</td><td>1</td></tr>
+              <tr><td>Tasa de cierre (venta / conversación)</td><td>0.8%</td></tr>
+              <tr><td>Costo por venta</td><td>$2,334.11 MXN</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--warn">
+          <span class="tag">⚠ Hallazgo clave</span>
+          <p>La campaña sí generó demanda —127 conversaciones a costo razonable ($18.38)— pero el equipo de SQS solo cerró 1 venta. El cuello de botella <strong>no está en la pauta sino en el cierre/seguimiento de los chats</strong>. Este aprendizaje motivó el giro hacia una <strong>campaña de compras directas en el sitio</strong> (mayo), que elimina la dependencia del cierre manual.</p>
+        </div>
+      </div>
+
+      <!-- Mayo -->
+      <div class="tl-item reveal">
+        <div class="tl-node n-may"><i></i></div>
+        <div class="tl-head"><span class="tl-month">🔵 Mayo 2026</span><h3 class="tl-title">Cierre de Shopify y campaña de compras</h3></div>
+        <h4>Hitos</h4>
+        <ul class="clean">
+          <li><strong>Finalización del sitio en Shopify</strong> (tienda lista para conversión).</li>
+          <li><strong>Inicio de la campaña de compras</strong> en la página web (Meta → checkout en sitio).</li>
+          <li>Entregables de soporte: Plan de Optimización Estratégica, comparativa de precios y evaluación de conceptos.</li>
+        </ul>
+
+        <h4>Resultados de campaña — Compras en sitio</h4>
+        <div class="adset">Ad set: 05/20/26 GENERAL-1 | MEX | SHOPIFY · activa, datos acumulados desde 20 may</div>
+
+        <div class="callout">
+          <span class="tag">Objetivo de optimización</span>
+          <p>Compras en el sitio (website purchases) — distinto a la campaña de WhatsApp, que optimizaba a conversaciones. No son comparables directamente.</p>
+        </div>
+
+        <div class="tablewrap">
+          <table class="kv">
+            <thead><tr><th>Métrica</th><th>Valor</th></tr></thead>
+            <tbody>
+              <tr><td>Inversión</td><td>$3,005.12 MXN</td></tr>
+              <tr><td>Compras atribuidas en Meta</td><td>9</td></tr>
+              <tr><td>Costo por compra (CPA)</td><td>$333.90 MXN</td></tr>
+              <tr><td>Estado</td><td><span class="badge badge--live"><i></i>Activa</span></td></tr>
+              <tr><td>Pedidos en Shopify (visibles)</td><td>10 · $3,229 MXN</td></tr>
+              <tr><td>Ticket promedio</td><td>$322.90 MXN</td></tr>
+              <tr><td>ROAS aprox. (CPA vs ticket)</td><td>~0.97x</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="subnote" style="margin-top:-12px">Primera compra ≈ punto de equilibrio.</p>
+
+        <div class="callout callout--warn">
+          <span class="tag">⚠ Nota de atribución</span>
+          <p>Los pedidos de Shopify incluyen todo el canal Online Store, no solo lo atribuido a Meta (9 compras). Confirmar el total real de pedidos del periodo para un ROAS exacto.</p>
+        </div>
+      </div>
+
+      <!-- Junio -->
+      <div class="tl-item reveal">
+        <div class="tl-node n-jun"><i></i></div>
+        <div class="tl-head"><span class="tl-month">🟢 Junio 2026</span><h3 class="tl-title">Producción de creativos</h3></div>
+        <h4>Hitos</h4>
+        <ul class="clean">
+          <li>Pipeline de producción de anuncios por concepto (AMA, Producto-Callouts, Identidad-Callout).</li>
+          <li>Banco de fotografía de producto (Simón sin fondo, alita, porción semanal 110g x3).</li>
+        </ul>
+
+        <h4>Resultados de campaña</h4>
+        <p>La campaña de compras en sitio (05/20/26 GENERAL-1 | MEX | SHOPIFY) sigue <strong>activa</strong> y acumula resultados desde su lanzamiento en mayo — ver datos en el bloque de <strong>Mayo 2026</strong>. Los nuevos creativos de junio se incorporarán a esta campaña para testing.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 5. INSIGHTS ===================== -->
+<section id="s5" data-deco="light-a">
+  <div class="deco"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="num">05</span><span class="lbl">Insights</span></div>
+    <h2 class="reveal">Insights y aprendizajes</h2>
+    <p class="subnote reveal">Qué hemos aprendido de la cuenta. Se actualiza con cada campaña.</p>
+
+    <h4 class="reveal">Aprendizajes clave</h4>
+    <div class="icards">
+      <div class="icard reveal" data-d="1">
+        <div class="ix"><span class="n">Aprendizaje 01</span><span class="src">WhatsApp</span></div>
+        <h5>El problema fue el cierre, no la pauta.</h5>
+        <p>La campaña entregó 127 conversaciones a $18.38 c/u (alcance de 19,277), pero solo se cerró 1 venta. El embudo se rompe en el seguimiento manual de los chats, no en la generación de interés.</p>
+      </div>
+      <div class="icard reveal" data-d="2">
+        <div class="ix"><span class="n">Aprendizaje 03</span><span class="src">Compras</span></div>
+        <h5>Conversión directa ya funcionando.</h5>
+        <p>La campaña a Shopify entrega ventas reales sin depender del cierre manual: 9 compras atribuidas y 10 pedidos visibles por $3,229 MXN.</p>
+      </div>
+      <div class="icard reveal" data-d="3">
+        <div class="ix"><span class="n">Aprendizaje 04</span><span class="src">Rentabilidad</span></div>
+        <h5>El ticket (~$323) está casi igual al CPA ($333.90).</h5>
+        <p>Punto de equilibrio en la 1ª compra (ROAS ~0.97x). Como el producto es consumible, la rentabilidad real depende de la <strong>recompra (LTV)</strong>: si un cliente compra 2–3 veces, el CPA se amortiza con creces.</p>
+      </div>
+    </div>
+
+    <button class="biblink reveal" type="button" onclick="openBitacora()">
+      <span class="bl-l">
+        <span class="bl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+        <span>Ver bitácora completa de aprendizajes <span class="bl-meta">· 5 registros</span></span>
+      </span>
+      <span class="bl-arrow">→</span>
+    </button>
+  </div>
+</section>
+
+<!-- ===================== 6. ESTRATEGIA HACIA ADELANTE ===================== -->
+<section id="s6" data-deco="light-b">
+  <div class="deco"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="num">06</span><span class="lbl">Estrategia</span></div>
+    <h2 class="reveal">Estrategia hacia adelante</h2>
+    <p class="reveal" data-d="1"><strong>Dirección general.</strong> El foco de los próximos 90 días es <strong>la pauta</strong>, manteniendo la misma propuesta y oferta que traemos hoy (ticket promedio ~$323 MXN) y una <strong>inversión fija de $18,000 MXN en los 90 días</strong> (~$6,000/mes). La palanca principal es el <strong>CPA</strong>: hoy está casi a la par del ticket (ROAS ~0.97x), así que cada peso que baje el CPA se traduce directamente en más pedidos y mejor ROAS.</p>
+
+    <h4 class="reveal">Punto de partida (datos reales)</h4>
+    <div class="statrow">
+      <div class="s reveal" data-d="1"><div class="l">CPA</div><div class="v"><span class="counter" data-to="333.90" data-decimals="2" data-prefix="$">$0</span></div></div>
+      <div class="s reveal" data-d="2"><div class="l">Ticket</div><div class="v"><span class="counter" data-to="322.90" data-decimals="2" data-prefix="$">$0</span></div></div>
+      <div class="s reveal" data-d="3"><div class="l">Pedidos</div><div class="v">~<span class="counter" data-to="10">0</span> <span>en ~16 días</span></div></div>
+      <div class="s reveal" data-d="4"><div class="l">ROAS 1ª compra</div><div class="v">~<span class="counter" data-to="0.97" data-decimals="2">0</span>x</div></div>
+    </div>
+
+    <h3 class="reveal">Tres escenarios a 90 días</h3>
+    <p class="subnote reveal">Misma oferta y misma inversión ($18,000 MXN). Lo que cambia entre escenarios es el CPA que logremos. Proyecciones estimadas con ticket constante de ~$323.</p>
+
+    <div class="scenwrap reveal" data-d="1">
+      <table class="scen">
+        <thead>
+          <tr>
+            <th></th>
+            <th><div class="scen-h"><span class="nm">Conservador</span><span class="tg">🟡 lo seguro</span></div></th>
+            <th class="col-emph"><div class="scen-h"><span class="nm">Base</span><span class="tg">objetivo</span></div></th>
+            <th><div class="scen-h"><span class="nm">Agresivo</span><span class="tg">🔵 stretch</span></div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Inversión 90 días</td><td>$18,000 MXN</td><td class="col-emph">$18,000 MXN</td><td>$18,000 MXN</td></tr>
+          <tr><td>CPA logrado</td><td>~$320</td><td class="col-emph">~$260</td><td>~$210</td></tr>
+          <tr><td>Pedidos estimados (90 d)</td><td>~56</td><td class="col-emph">~69</td><td>~85</td></tr>
+          <tr><td>Ingresos 1ª compra</td><td>~$18,100</td><td class="col-emph">~$22,300</td><td>~$27,400</td></tr>
+          <tr><td>ROAS 1ª compra</td><td>~1.0x</td><td class="col-emph">~1.24x</td><td>~1.52x</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="scen-cards reveal" id="scenCards" data-d="1"></div>
+
+    <div class="callout reveal">
+      <span class="tag">Nota</span>
+      <p>Los tres escenarios calculan ROAS solo sobre la <strong>primera compra</strong>. Como el snack es consumible, la <strong>recompra (LTV)</strong> mejora el retorno real en todos los casos.</p>
+    </div>
+
+    <p class="reveal"><strong>Recomendación.</strong> Trabajar para acercarnos al escenario <strong>Base o mejor</strong>: con la misma inversión, bajar el CPA de ~$320 a ~$260 significa pasar de ~56 a ~69 pedidos y de equilibrio a ROAS positivo.</p>
+
+    <h3 class="reveal">Ejes de optimización</h3>
+    <p class="reveal">El ROAS se mueve por tres palancas independientes. Trabajamos cada una como un eje propio:</p>
+    <div class="ejes">
+      <div class="eje reveal" data-d="1"><div class="num">1</div><h5>Optimización de CPA</h5><p>Reducir el costo por compra (hoy $333.90). Con presupuesto fijo, es la palanca que más mueve el volumen de pedidos. Se ataca con testing de creativos/ángulos, depuración de públicos y mejora del embudo de conversión en el sitio.</p></div>
+      <div class="eje reveal" data-d="2"><div class="num">2</div><h5>Optimización de ticket promedio</h5><p>Subir el valor de cada pedido (hoy $322.90) con bundles, packs y suscripción. Cada peso de ticket adicional mejora el ROAS sin tocar el CPA.</p></div>
+      <div class="eje reveal" data-d="3"><div class="num">3</div><h5>Optimización de LTV (recompra)</h5><p>Como el snack es consumible, el cliente debería comprar varias veces. Activar recompra (email/WhatsApp post-venta, recordatorios de reposición) convierte un CPA de equilibrio en rentable a lo largo de la vida del cliente. Requiere medir tasa y frecuencia de recompra.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. GLOSARIO ===================== -->
+<section id="s7" data-deco="light-a">
+  <div class="deco"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="num">07</span><span class="lbl">Glosario</span></div>
+    <h2 class="reveal">Glosario de métricas</h2>
+    <div class="tablewrap reveal" data-d="1">
+      <table>
+        <thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Inversión</strong></td><td>Dinero gastado en pauta publicitaria.</td></tr>
+          <tr><td><strong>Impresiones</strong></td><td>Número de veces que se mostró el anuncio.</td></tr>
+          <tr><td><strong>CTR</strong> (Click-Through Rate)</td><td>% de personas que dieron clic tras ver el anuncio.</td></tr>
+          <tr><td><strong>CVR</strong> (Conversion Rate)</td><td>% de visitantes que completan la acción deseada (compra/lead).</td></tr>
+          <tr><td><strong>CPA</strong> (Costo por Adquisición)</td><td>Cuánto cuesta conseguir un cliente o conversión.</td></tr>
+          <tr><td><strong>Costo por conversación</strong></td><td>Cuánto cuesta iniciar un chat de WhatsApp desde el anuncio.</td></tr>
+          <tr><td><strong>ROAS</strong> (Return on Ad Spend)</td><td>Ingresos generados por cada peso invertido en pauta. ROAS 3x = $3 por cada $1.</td></tr>
+          <tr><td><strong>Ticket promedio</strong></td><td>Valor promedio de cada pedido.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" data-deco="footer">
+  <div class="deco"></div>
+  <div class="footer__inner">
+    <div class="footer__pre">Próxima actualización</div>
+    <h2>Al cierre de <em>junio 2026</em></h2>
+    <p class="footer__sub">Se sumará el bloque del mes: los nuevos creativos en producción (AMA, Producto-Callouts e Identidad-Callout) y los datos acumulados de la campaña de compras en sitio.</p>
+    <div class="footer__cadence">
+      <span class="cad done">Mar</span><span class="cad-sep"></span>
+      <span class="cad done">Abr</span><span class="cad-sep"></span>
+      <span class="cad done">May</span><span class="cad-sep"></span>
+      <span class="cad now">Jun</span><span class="cad-sep next"></span>
+      <span class="cad next">Jul</span>
+    </div>
+  </div>
+  <div class="footer__meta">
+    <div class="footer__brand"><img src="favicon_simonquieresnack.png" alt="SQS"><span class="d"></span>Aigenci gestiona Simón Quiere Snack</div>
+    <div class="footer__legal">REPORTE-VIVO · actualizado 5 jun 2026</div>
+  </div>
+</footer>
+
+<!-- ===================== BITÁCORA DRAWER ===================== -->
+<div class="scrim" id="scrim" onclick="closeBitacora()"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Bitácora de aprendizajes">
+  <div class="drawer__head">
+    <div>
+      <div class="dt-eyebrow">Insights · log completo</div>
+      <h3>Bitácora de aprendizajes</h3>
+      <div class="dt-sub">Qué hemos aprendido de la cuenta. Se actualiza con cada campaña.</div>
+    </div>
+    <button class="xbtn" type="button" onclick="closeBitacora()" aria-label="Cerrar">✕</button>
+  </div>
+  <div class="drawer__body">
+    <div class="logitem"><div class="ln">Aprendizaje 01 · WhatsApp</div><p><strong>(WhatsApp) El problema fue el cierre, no la pauta.</strong> La campaña entregó 127 conversaciones a $18.38 c/u (alcance de 19,277), pero solo se cerró 1 venta. El embudo se rompe en el seguimiento manual de los chats, no en la generación de interés.</p></div>
+    <div class="logitem"><div class="ln">Aprendizaje 02 · Estrategia</div><p><strong>Implicación estratégica:</strong> mover el peso de la adquisición a <strong>compras directas en el sitio</strong> reduce la dependencia del equipo de ventas para cerrar. Decisión ya ejecutada en mayo.</p></div>
+    <div class="logitem"><div class="ln">Aprendizaje 03 · Compras en sitio</div><p><strong>(Compras en sitio) Conversión directa ya funcionando.</strong> La campaña a Shopify entrega ventas reales sin depender del cierre manual: 9 compras atribuidas y 10 pedidos visibles por $3,229 MXN.</p></div>
+    <div class="logitem"><div class="ln">Aprendizaje 04 · Rentabilidad</div><p><strong>El ticket promedio (~$323) está casi igual al CPA ($333.90).</strong> Hoy la campaña está en <strong>punto de equilibrio en la primera compra</strong> (ROAS ~0.97x). Como el producto es consumible, la rentabilidad real depende de la <strong>recompra (LTV)</strong>: si un cliente compra 2–3 veces, el CPA se amortiza con creces.</p></div>
+    <div class="logitem"><div class="ln">Aprendizaje 05 · Comparativa</div><p><strong>Dos campañas, dos objetivos — no se comparan de frente:</strong> WhatsApp optimizó a <em>conversaciones</em> ($18.38 c/u, cierre manual, 1 venta) y Shopify optimiza a <em>compras</em> ($333.90 c/u, cierre automático, 9+ ventas). La de sitio convierte mejor en ventas reales pese al costo por evento más alto.</p></div>
+  </div>
+</aside>
+
+<script>
+/* ====== STICKER INJECTOR ====== */
+(function(){
+  const S = {
+    sparkle:(c,o)=>`<svg width="100%" height="100%" viewBox="0 0 60 60" fill="${c}" opacity="${o}"><g transform="rotate(12 30 30)"><rect x="26" y="6" width="8" height="22" rx="4"/><rect x="26" y="32" width="8" height="22" rx="4"/><rect x="6" y="26" width="22" height="8" rx="4"/><rect x="32" y="26" width="22" height="8" rx="4"/></g></svg>`,
+    plus:(c,o)=>`<svg width="100%" height="100%" viewBox="0 0 40 40" fill="${c}" opacity="${o}"><rect x="17" y="6" width="6" height="28" rx="3"/><rect x="6" y="17" width="28" height="6" rx="3"/></svg>`,
+    wave:(c,o)=>`<svg width="100%" height="100%" viewBox="0 0 65 35" fill="none" stroke="${c}" stroke-width="4" stroke-linecap="round" opacity="${o}"><path d="M4 24 C 12 8, 20 8, 28 18 S 44 28, 52 14 S 61 10, 61 12"/></svg>`,
+    dot:(c,o)=>`<svg width="100%" height="100%" viewBox="0 0 18 18" fill="${c}" opacity="${o}"><circle cx="9" cy="9" r="7"/></svg>`,
+    star:(c,o)=>`<svg width="100%" height="100%" viewBox="0 0 28 28" fill="${c}" opacity="${o}"><polygon points="14,1 17.6,9.8 27,10.5 19.7,16.6 22.1,26 14,20.8 5.9,26 8.3,16.6 1,10.5 10.4,9.8"/></svg>`
+  };
+  const CY="#5FCFFA", PK="#FD327B", WT="#FFFFFF", PU="#6F4C9E";
+  // each: [shape, color, opacity, size(px or [w,h]), pos{}, rot, anim, delay]
+  const MAP = {
+    hero:[
+      ["sparkle",CY,.9,68,{top:"12%",right:"9%"},15,"fy",0],
+      ["plus",WT,.55,38,{top:"54%",left:"5%"},0,"fy",-3],
+      ["wave",PK,.8,[64,34],{bottom:"14%",right:"7%"},0,"fx",-1],
+      ["dot",CY,.5,18,{top:"30%",left:"11%"},0,"fy",-4],
+      ["star",PK,.55,28,{top:"68%",right:"13%"},-10,"fy",-2]
+    ],
+    "light-a":[
+      ["sparkle",PU,.16,52,{top:"7%",right:"4%"},25,"fy",-1],
+      ["wave",PK,.16,[50,28],{bottom:"10%",left:"3%"},0,"fx",-2],
+      ["dot",PK,.14,20,{top:"42%",left:"2%"},0,"fy",-5]
+    ],
+    "light-b":[
+      ["sparkle",PU,.15,48,{top:"6%",left:"4%"},-20,"fy",-2],
+      ["wave",PK,.15,[52,28],{bottom:"9%",right:"4%"},0,"fx",-1],
+      ["dot",CY,.18,18,{top:"38%",right:"3%"},0,"fy",-4]
+    ],
+    footer:[
+      ["sparkle",CY,.3,60,{top:"12%",left:"7%"},-15,"fy",-2],
+      ["plus",WT,.2,32,{top:"30%",right:"6%"},0,"fy",-4],
+      ["wave",PK,.4,[55,28],{bottom:"24%",left:"9%"},0,"fx",-1],
+      ["dot",PK,.35,20,{bottom:"14%",right:"10%"},0,"fy",-3]
+    ]
+  };
+  document.querySelectorAll("[data-deco]").forEach(sec=>{
+    const layer = sec.querySelector(".deco"); if(!layer) return;
+    const set = MAP[sec.dataset.deco]||[];
+    set.forEach(([sh,c,o,sz,pos,rot,anim,delay])=>{
+      const el=document.createElement("span");
+      el.className="sk "+anim;
+      const w=Array.isArray(sz)?sz[0]:sz, h=Array.isArray(sz)?sz[1]:sz;
+      el.style.width=w+"px"; el.style.height=h+"px";
+      Object.entries(pos).forEach(([k,v])=>el.style[k]=v);
+      el.style.setProperty("--rot",(rot||0)+"deg");
+      el.style.animationDelay=(delay||0)+"s";
+      el.innerHTML=S[sh](c,o);
+      layer.appendChild(el);
+    });
+  });
+})();
+
+/* ====== SCENARIO MOBILE CARDS (built from the table — single source of truth) ====== */
+(function(){
+  const table=document.querySelector('table.scen');
+  const cont=document.getElementById('scenCards');
+  if(!table||!cont) return;
+  const cols=[...table.querySelectorAll('thead th')].slice(1).map(th=>({
+    nm:(th.querySelector('.nm')||{}).textContent||'',
+    tg:(th.querySelector('.tg')||{}).textContent||'',
+    emph:th.classList.contains('col-emph')
+  }));
+  const rows=[...table.querySelectorAll('tbody tr')].map(tr=>{
+    const c=[...tr.children];
+    return {label:c[0].textContent.trim(), vals:c.slice(1).map(td=>td.textContent.trim())};
+  });
+  cols.forEach((col,ci)=>{
+    const card=document.createElement('div');
+    card.className='scard'+(col.emph?' is-emph':'');
+    let h='<div class="scard__h"><span class="scard__nm">'+col.nm+'</span>'+
+          (col.tg?'<span class="scard__tg">'+col.tg+'</span>':'')+'</div><dl class="scard__list">';
+    rows.forEach(r=>{ h+='<div><dt>'+r.label+'</dt><dd>'+(r.vals[ci]||'—')+'</dd></div>'; });
+    h+='</dl>';
+    card.innerHTML=h;
+    cont.appendChild(card);
+  });
+})();
+
+/* ====== ANIMATED COUNTERS ====== */
+(function(){
+  const fmt=(v,d)=>v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+  function run(el){
+    const target=parseFloat(el.dataset.to), dec=parseInt(el.dataset.decimals||'0'),
+          pre=el.dataset.prefix||'', dur=1400; let start=null;
+    function step(ts){
+      if(!start)start=ts;
+      const t=Math.min((ts-start)/dur,1), e=1-Math.pow(1-t,3);
+      el.textContent=pre+fmt(e*target,dec);
+      if(t<1)requestAnimationFrame(step); else el.textContent=pre+fmt(target,dec);
+    }
+    requestAnimationFrame(step);
+  }
+  const io=new IntersectionObserver((ents)=>{
+    ents.forEach(en=>{ if(en.isIntersecting){ run(en.target); io.unobserve(en.target);} });
+  },{threshold:.4});
+  document.querySelectorAll('.counter').forEach(el=>io.observe(el));
+})();
+
+/* ====== SCROLL REVEALS ====== */
+(function(){
+  const io=new IntersectionObserver((ents)=>{
+    ents.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+
+/* ====== NAV SCROLLSPY ====== */
+(function(){
+  const links=[...document.querySelectorAll('.secnav a')];
+  const map={}; links.forEach(a=>map[a.getAttribute('href').slice(1)]=a);
+  const io=new IntersectionObserver((ents)=>{
+    ents.forEach(en=>{ if(en.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      if(map[en.target.id])map[en.target.id].classList.add('active');
+    }});
+  },{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('section[id]').forEach(s=>io.observe(s));
+})();
+
+/* ====== BITÁCORA DRAWER ====== */
+function openBitacora(){
+  document.getElementById('scrim').classList.add('open');
+  document.getElementById('drawer').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeBitacora(){
+  document.getElementById('scrim').classList.remove('open');
+  document.getElementById('drawer').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{ if(e.key==='Escape')closeBitacora(); });
+</script>
+
+</body>
+</html>
